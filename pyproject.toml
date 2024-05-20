@@ -1,0 +1,25 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fostercauer"
+version = "0.0.1"
+description = "Foster and Cauer RC Thermal Network Library"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy >= 1.24.1",
+    "scipy >= 1.10.0",
+    "sympy >= 1.11.1",
+    "matplotlib >= 3.8.2"
+]
+readme = "README.md"
+authors = [
+    { name = "Stephen Sherbrook", email = "shngn7@gmail.com" }
+]
+
+[project.scripts]
+plot_foster = "fostercauer.scripts.plot_foster:main"
+csv2cauer = "fostercauer.scripts.csv2cauer:main"
